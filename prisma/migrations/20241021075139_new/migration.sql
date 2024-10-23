@@ -1,0 +1,4 @@
+-- AlterTable
+ALTER TABLE `licences` ADD COLUMN `access_token` VARCHAR(191) NOT NULL DEFAULT '',
+    ADD COLUMN `refresh_token` VARCHAR(191) NOT NULL DEFAULT '',
+    ADD COLUMN `token_expiry` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3);
