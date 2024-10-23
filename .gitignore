@@ -1,6 +1,6 @@
 # Ignore environment files
 .env
-src\migrate file
+src\migrate file\migrations
 
 
 # compiled output
