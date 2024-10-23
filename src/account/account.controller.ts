@@ -38,7 +38,7 @@ export class AccountController {
     @Get('profile')
     async userprofile(){
         const userInfo = await this.accountService.getUserProfile();
-        this.userSerive.saveUserData(userInfo);
+        await this.userSerive.saveUserData(userInfo);
 
         return userInfo;
     }
