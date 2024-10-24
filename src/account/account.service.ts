@@ -64,7 +64,7 @@ export class AccountService implements OnModuleInit {
                 let expiryTime = new Date(Date.now() + this.token.expires_in * 1000);
 
                 const user = await this.prisma.licences.update({
-                    where: { userId: this.currentUser.userId },
+                    where: { userId: (await this.currentUser).userId },
                     data: { active: true, token: this.token, token_expiry: expiryTime }
                 })
 

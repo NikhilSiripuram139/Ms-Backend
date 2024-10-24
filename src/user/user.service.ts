@@ -15,7 +15,7 @@ export class UserService {
 
     async saveUserData(userInfo : any){
         let useremail : string = userInfo.mail;
-        await this.prisma.licences.upsert({
+        return await this.prisma.licences.upsert({
             where : { userId : useremail },
             update : { active : true},
             create: {
